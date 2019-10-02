@@ -17,6 +17,7 @@ function rootReducer(state = INITIAL_STATE, action) {
       let index = state.cart.findIndex(product => product=== action.payload)
       let newCart = [...state.cart]
       newCart.splice(index, 1)
+      console.log("INDEX",index)
       return {
         ...state, 
         cart: newCart
